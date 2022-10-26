@@ -16,6 +16,10 @@
   align-items: center;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container > div,
 .container > button {
   padding: 20px;
