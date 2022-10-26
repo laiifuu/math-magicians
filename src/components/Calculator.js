@@ -1,16 +1,6 @@
-import React from "react";
-import Button from './Button'
-
-class CalculatorScreen extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (<div className={this.props.className}>0</div>);
-  }
-}
+import React from 'react';
+import Button from './Button';
+import CalculatorScreen from './CalculatorScreen';
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -21,7 +11,7 @@ class Calculator extends React.Component {
   render() {
     return (
       <div className="container">
-        <CalculatorScreen className="width_100 black left-text" />
+        <CalculatorScreen />
         <Button className="width_25 grey center-text" value="AC" />
         <Button className="width_25 grey center-text" value="%" />
         <Button className="width_25 grey center-text" value="+/-" />

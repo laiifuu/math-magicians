@@ -4,7 +4,7 @@
   --pink: #e53170;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -16,7 +16,8 @@
   align-items: center;
 }
 
-.container > div, .container > button {
+.container > div,
+.container > button {
   padding: 20px;
   border: 1px solid var(--black);
 }
@@ -37,12 +38,12 @@
   border: 1px solid var(--black);
 }
 
-.width_100{
+.width_100 {
   width: 100%;
 }
 
 .width_25 {
-  width:25%;
+  width: 25%;
 }
 
 .width_50 {
@@ -54,7 +55,7 @@
   color: white;
 }
 
-.grey{
+.grey {
   background-color: var(--grey);
 }
 
@@ -63,7 +64,7 @@
   color: white;
 }
 
-@media screen and (min-width: 378px){
+@media screen and (min-width: 378px) {
   .container {
     width: 375px;
   }
