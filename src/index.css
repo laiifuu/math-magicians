@@ -1,27 +1,71 @@
-body {
-  margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --black: #0f0e17;
+  --grey: #a7a9be;
+  --pink: #e53170;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container > div,
+.container > button {
+  padding: 20px;
+  border: 1px solid var(--black);
+}
+
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: end;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--black);
+}
+
+.width_100 {
+  width: 100%;
+}
+
+.width_25 {
+  width: 25%;
+}
+
+.width_50 {
+  flex: 50%;
+}
+
+.pink {
+  background-color: var(--pink);
+  color: white;
+}
+
+.grey {
+  background-color: var(--grey);
+}
+
+.black {
+  background-color: var(--black);
+  color: white;
+}
+
+@media screen and (min-width: 378px) {
+  .container {
+    width: 375px;
+  }
 }
