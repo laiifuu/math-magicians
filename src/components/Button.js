@@ -8,14 +8,15 @@ class Button extends React.Component {
   }
 
   render() {
-    const { className, value } = this.props;
-    return (<button className={className} type="button">{value}</button>);
+    const { className, value, onClick } = this.props;
+    return (<button className={className} type="button" onClick={onClick}>{value}</button>);
   }
 }
 
 Button.propTypes = {
   className: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Button;
