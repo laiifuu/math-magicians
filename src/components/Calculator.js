@@ -1,36 +1,47 @@
 import React from 'react';
 import Button from './Button';
 import CalculatorScreen from './CalculatorScreen';
+import calculate from '../logic/calculate';
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      total: '0',
+      next: null,
+      operation: null,
+    };
+  }
+
+  handleClick = (e) => {
+    this.setState((prevState) => calculate(prevState, e.target.innerText));
   }
 
   render() {
+    const { total, operation, next } = this.state;
+
     return (
       <div className="container">
-        <CalculatorScreen />
-        <Button className="width_25 grey center-text" value="AC" />
-        <Button className="width_25 grey center-text" value="%" />
-        <Button className="width_25 grey center-text" value="+/-" />
-        <Button className="width_25 pink center-text" value="/" />
-        <Button className="width_25 grey center-text" value="7" />
-        <Button className="width_25 grey center-text" value="8" />
-        <Button className="width_25 grey center-text" value="9" />
-        <Button className="width_25 pink center-text" value="*" />
-        <Button className="width_25 grey center-text" value="4" />
-        <Button className="width_25 grey center-text" value="5" />
-        <Button className="width_25 grey center-text" value="6" />
-        <Button className="width_25 pink center-text" value="-" />
-        <Button className="width_25 grey center-text" value="1" />
-        <Button className="width_25 grey center-text" value="2" />
-        <Button className="width_25 grey center-text" value="3" />
-        <Button className="width_25 pink center-text" value="+" />
-        <Button className="width_50 grey center-text" value="0" />
-        <Button className="width_25 grey center-text" value="." />
-        <Button className="width_25 pink center-text" value="=" />
+        <CalculatorScreen total={total} operation={operation} next={next} />
+        <Button className="width_25 grey center-text" value="AC" onClick={this.handleClick} />
+        <Button className="width_25 grey center-text" value="%" onClick={this.handleClick} />
+        <Button className="width_25 grey center-text" value="+/-" onClick={this.handleClick} />
+        <Button className="width_25 pink center-text" value="÷" onClick={this.handleClick} />
+        <Button className="width_25 grey center-text" value="7" onClick={this.handleClick} />
+        <Button className="width_25 grey center-text" value="8" onClick={this.handleClick} />
+        <Button className="width_25 grey center-text" value="9" onClick={this.handleClick} />
+        <Button className="width_25 pink center-text" value="x" onClick={this.handleClick} />
+        <Button className="width_25 grey center-text" value="4" onClick={this.handleClick} />
+        <Button className="width_25 grey center-text" value="5" onClick={this.handleClick} />
+        <Button className="width_25 grey center-text" value="6" onClick={this.handleClick} />
+        <Button className="width_25 pink center-text" value="-" onClick={this.handleClick} />
+        <Button className="width_25 grey center-text" value="1" onClick={this.handleClick} />
+        <Button className="width_25 grey center-text" value="2" onClick={this.handleClick} />
+        <Button className="width_25 grey center-text" value="3" onClick={this.handleClick} />
+        <Button className="width_25 pink center-text" value="+" onClick={this.handleClick} />
+        <Button className="width_50 grey center-text" value="0" onClick={this.handleClick} />
+        <Button className="width_25 grey center-text" value="." onClick={this.handleClick} />
+        <Button className="width_25 pink center-text" value="=" onClick={this.handleClick} />
       </div>
     );
   }
