@@ -14,9 +14,15 @@ class CalculatorScreen extends React.Component {
 }
 
 CalculatorScreen.propTypes = {
-  total: PropTypes.string.isRequired,
-  next: PropTypes.string.isRequired,
-  operation: PropTypes.string.isRequired,
+  total: PropTypes.string,
+  next: PropTypes.string,
+  operation: PropTypes.string,
+};
+
+CalculatorScreen.defaultProps = {
+  total: '',
+  next: '',
+  operation: '',
 };
 
 export default CalculatorScreen;
