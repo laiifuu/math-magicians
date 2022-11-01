@@ -6,14 +6,63 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+}
+
+a {
+  color: #0f0e17;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: #e53170 1px solid;
+}
+
+p {
+  font-size: 18px;
+}
+
+.quote {
+  padding: 15px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  border: 1px solid #e53170;
 }
 
 .App {
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   display: flex;
-  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 20px;
 }
 
 button {
@@ -68,8 +117,29 @@ button {
   color: white;
 }
 
-@media screen and (min-width: 378px) {
-  .container {
-    width: 375px;
+@media screen and (min-width: 768px) {
+  .App {
+    height: 100vh;
+  }
+
+  header {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  main > h2,
+  main > .container {
+    flex: 1;
   }
 }
