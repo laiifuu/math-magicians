@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Testing CalculatorScreen component renders CalculatorScreen component correctly 1`] = `
-<div
-  className="width_100 black left-text"
->
-  0  
-</div>
-`;
