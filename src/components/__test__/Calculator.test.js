@@ -67,6 +67,6 @@ describe('Testing user interactions', () => {
     fireEvent.click(operator);
     fireEvent.click(seven);
     fireEvent.click(equalSign);
-    expect(calcScreen.innerHTML.trim()).toBe('0');
+    expect(calcScreen.textContent.trim()).toBe('0');
   });
 });
