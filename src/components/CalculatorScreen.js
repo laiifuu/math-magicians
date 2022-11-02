@@ -9,7 +9,7 @@ class CalculatorScreen extends React.Component {
 
   render() {
     const { total, next, operation } = this.props;
-    return (<div className="width_100 black left-text">{`${total || ''} ${operation || ''} ${next || ''}`}</div>);
+    return (<div className="width_100 black left-text" data-testid='calcScreen'>{`${total || ''} ${operation || ''} ${next || ''}`}</div>);
   }
 }
 
