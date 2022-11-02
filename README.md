@@ -15,6 +15,10 @@
 - Gitflow
 - Jest
 
+## Live Demo
+
+You can check the site using [this link](https://fascinating-wisp-369d3a.netlify.app/).
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
