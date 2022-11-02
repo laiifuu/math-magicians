@@ -10,7 +10,7 @@ describe("Tests Header Component", () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it(' adds the active class to the clicked link', () => {
+    it(' Tests How many links there are', () => {
         render(
             <BrowserRouter>
                 <Header />
