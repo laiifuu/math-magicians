@@ -32,6 +32,7 @@ Assuming you have git and node.js installed on your computer, please follow the 
 - Navigate to that folder in the command line using the `cd` command.
 - Run the following command to install the necessary packages: `npm install`. 
 - Run the following command to view the project in the browser: `npm start`. 
+- Run the following command to run the tests: `npm run test`. 
 
 ## Authors
 
