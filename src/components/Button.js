@@ -8,8 +8,8 @@ class Button extends React.Component {
   }
 
   render() {
-    const { className, value, onClick } = this.props;
-    return (<button className={className} type="button" onClick={onClick}>{value}</button>);
+    const { className, value, onClick, id} = this.props;
+    return (<button className={className} type="button" onClick={onClick} id={id}>{value}</button>);
   }
 }
 
